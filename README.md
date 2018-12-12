@@ -1,5 +1,5 @@
-Assignment<br>
-Your team is working on an app that will help recruiters review all of a candidates information. You've been assigned to work on one feature for the app - to display a list of repos belonging to a particular GitHub handle.<br>
+<h2>Assignment</h2><br>
+<p>Your team is working on an app that will help recruiters review all of a candidates information. You've been assigned to work on one feature for the app - to display a list of repos belonging to a particular GitHub handle.</p><br>
 <br>
 <ul>
 <li>Review GitHub's API documentation for the list user repositories endpoint to understand how this endpoint works.</li><br>
