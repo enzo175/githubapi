@@ -63,6 +63,10 @@ function displayError(error) {
     $('.loading').addClass('hidden');
     $('.js-results').removeClass('hidden')
 }
+//This function uses random to select the text of the Search Button
+function getSearchPhrase() {
+    return (['Search', 'Find', 'Gitty up GitHub','Look up','Go','Check','Push this button','Don\'t push this button'])[Math.floor(Math.random() * 8)];
+}
 
 //Event listener for submit event
 function watchForm() {
@@ -71,6 +75,11 @@ function watchForm() {
         //override default behavior
         event.preventDefault();
         console.log('watchForm ran');
+        //determine the text of the button
+        let searchPhrase = getSearchPhrase()
+        console.log(searchPhrase)
+        //change the text of the search button
+        $('#find-btn').html(searchPhrase)
         //clears any prior data from results section
         $('.js-results').empty().addClass('hidden')
         //store username 
