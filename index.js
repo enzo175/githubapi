@@ -14,17 +14,17 @@ function displayResults(responseJson) {
     let user = responseJson[0].owner.login
     let userinfo = `
         <h4>User: <span class="user">${user}</span></h4>
-        <span class="user">Repos:</span>
+        <h4><span class="user">Repos: ${responseJson.length}</span></h4>
         <ul class="results-list"></ul>
     `
     $('.js-results').append(userinfo)
     //loop through results and make a list of repos, including link and description
     for (let i = 0; i < responseJson.length; i++) {
         $('.js-results').append(`
-        <li><h4>${responseJson[i].name}</h4>
+        <div class="result-item"><li><h4>${responseJson[i].name}</h4>
         <a href="${responseJson[i].html_url}">${responseJson[i].html_url}</a>
         <p>${responseJson[i].description}</p>
-        </li>
+        </li></div>
         `)
     }
     //removes hidden class to display results
